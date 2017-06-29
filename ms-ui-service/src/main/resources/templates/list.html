@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"></meta>
+<title>Insert title here</title>
+</head>
+<body>
+<main id="orders">
+<h1>Welcome To The world Of Spring MVC</h1>
+
+
+<article th:each="order: ${orders}">
+<div>
+<p>ID :<span th:text="${order.id}"> </span></p>
+<p>Name :<span th:text="${order.name}"> </span></p>
+<p>Price :<span th:text="${order.price}"> </span></p>
+</div>
+
+
+</article>
+
+
+
+</main>
+</body>
+</html>

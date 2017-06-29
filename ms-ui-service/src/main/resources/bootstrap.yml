@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active:
+    - default
+  cloud:
+    config:
+      uri: http://localhost:8888
+  application:
+    name: ms-order-payment-client
+server:
+  port: 8004
+management:
+  security:
+    enabled: false
