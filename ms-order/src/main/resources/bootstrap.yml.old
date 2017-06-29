@@ -1,0 +1,17 @@
+spring:
+
+  cloud:
+    config:
+      uri: http://localhost:8888
+  application:
+    name: ms-order
+server:
+  port: ${PORT:${SERVER_PORT:0}}  # Select any available port
+
+# Allows Eureka to recognize multiple instances on same hst as separate instance
+eureka:
+  instance:
+      instanceId: ${spring.application.name}:${vcap.spring.application.instance_id}:${random.value}
+management:
+  security:
+    enabled: false

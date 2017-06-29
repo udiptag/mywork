@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active:
+    - default
+  cloud:
+    config:
+      uri: http://localhost:8888
+  application:
+    name: ms-payment
+server:
+  port: 8003
+management:
+  security:
+    enabled: false
